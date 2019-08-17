@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,500i&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+a{
+    color:#fff;
+    text-decoration: none;
+}
+
+body{
+    font-size: 100%;
+    color: #fff;
+    line-height: 200%;
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    /* background-image: linear-gradient(-25deg, #616161 0%, #96B7C4 100%); */
+    background: linear-gradient(245deg, #d9d526, #d97e26, #2671d9, #293098, #23254d, #3d3d4b, #cdcdf5);
+    background-size: 1400% 1400%;
+    animation: changeBgColor 150s ease infinite;
+
+}
+
+@keyframes changeBgColor { 
+    0%{background-position:0% 53%}
+    50%{background-position:100% 48%}
+    100%{background-position:0% 53%}
+}
+
+
+
+h1 {
+    padding: 2em 0 1em;
+    text-align: center;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+section {
+    
+    margin: 0 auto;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.locationBox {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    /* background: #49494946; */
+    padding: 2em;
+    opacity: 1;
+}
+
+input, button { 
+    padding: 0.4em 1.2em;
+    margin: 5px;
+    color: rgb(110, 108, 108);
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+input:focus{
+    outline: none;
+}
+
+button {
+    color: #fff;
+    cursor: pointer;
+    background: none;
+    transition: all .5s;
+    position: relative;
+}
+
+button::before{
+    content:'';
+    background-color: #fff;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top:0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s;
+}
+
+button:hover {
+    color: rgb(110, 108, 108);
+}
+
+button:hover::before{
+    width: 100%;
+}
+
+.resultsBox{ 
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 1em;
+    background-color: rgba(143, 140, 140, 0.295);
+    padding: 1em;
+    font-size: 2em;
+    line-height: 220%;
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    transition: all 2s ease;
+}
+
+.resultsBox p:nth-of-type(2){
+    font-size: 2.6em;
+}
