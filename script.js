@@ -11,6 +11,12 @@ const btn = document.querySelector('button');
 
 btn.addEventListener('click', () => {
 
+    
+    //Reset results
+
+    resultsBox.style.bottom = '0';
+    resultsBox.style.opacity = '0';
+
     //Get input field value(location)        
     let locationInput = document.getElementById('location');
     let location = locationInput.value;
